@@ -15,8 +15,11 @@
     --yellow: #f1c40f;
   }
 
+
+
 body {
     background-color: var(--white);
+    height: 100vh;
 }
 
 /*ELEMENTOS HEADER*/
@@ -167,11 +170,13 @@ input::placeholder {
   .carrussel-container {
     display: flex;
     animation: slide 20s infinite linear; 
+    gap: 5px;
   }
   
   .carrussel-container img {
     width: 100vw; 
     object-fit: cover; 
+    cursor: pointer;
   }
   
   /* Animación para el deslizamiento */
@@ -304,6 +309,7 @@ main {
   gap: 20px; 
   max-width: 1200px; 
   margin: 0 auto; /
+  
 }
 
 .features div {
@@ -316,14 +322,13 @@ main {
   height: 100px;
   width: 100%;
   border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.077);
 }
 
 .features img {
   width: 20px; 
   height: auto;
-  margin-bottom: 10px;
-  
-  
+  margin-bottom: 10px; 
   
 }
 
@@ -333,9 +338,135 @@ main {
   padding: 5px;
 }
 
+/*CARRUSSEL 2*/
+.carrussel-wrapper-2 {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+  background-color: var(--white);
+}
+
+.carrussel-container-2 {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scrollCarrusel 30s linear infinite;
+  margin-top: 60px;
+  
+}
+
+@keyframes scrollCarrusel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.product-card .precio {
+  color: #e60000;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-card button {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.product-card button:hover {
+  background-color: #e67e00;
+}
+
+
+.wrapper-span1{
+  padding-left: 30px;
+
+}
+
+.carrussel-header{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.carrussel-header span:first-child{
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+.carrussel-header span:nth-child(2){
+  font-weight: bold;
+  color:#ff9800;
+  cursor: pointer;
+
+}
 
 
 
-  
-  
-  
+.section-4 {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.section-4 h2.coolpc {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.coolpc-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem; 
+  max-width: 800px;
+  margin: 0 auto; 
+}
+
+.coolpc-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+
